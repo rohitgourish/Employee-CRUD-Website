@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <br>
+            <form>
+                <h6>YOU HAVE SELECTED EMPLOYEE WITH ID = {{id}}</h6>
+                <div>
+                    <label>EDIT NAME</label>
+                    <input type="text" class="form-control" placeholder="Edit Name" [(ngModel)]="empData.name" name="name">
+                </div>
+                <div>
+                    <label>EDIT EMAIL</label>
+                    <input type="text" class="form-control" placeholder="Edit Email" [(ngModel)]="empData.email" name="email">
+                </div>
+    
+                <div>
+                    <label>EDIT LANGUAGE YOU ARE INTERESTED IN:</label>
+                    <select class="custom-select" [(ngModel)]="empData.subject" name = "subject">
+                        <option *ngFor="let topic of topics">{{topic}}</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>GENDER</label>
+                    <div class="form-check">
+                        <input type="radio"[(ngModel)]="empData.gender" class = "form-check-input" name="gender" value="Male">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" [(ngModel)]="empData.gender" class = "form-check-input" name = "gender" value="Female">
+                        <label class="form-check-label">Female</label>
+                    </div>
+                </div>
+                
+                <button class="btn btn-secondary" (click)="editEmployee()">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>
