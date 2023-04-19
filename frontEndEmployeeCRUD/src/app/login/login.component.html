@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class ="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h2>LOGIN PAGE</h2>
+            <form>
+                <div>
+                    <label>ENTER USERNAME</label>
+                    <input type="text" class="form-control" placeholder= "Username" [(ngModel)]="loginData.username" name="username">
+                    <small *ngIf="errorUsernameMessage!=null" class="text-danger">{{errorUsernameMessage}}</small>
+                </div>
+                <div>
+                    <label>ENTER PASSWORD</label>
+                    <input type="password" class="form-control" placeholder= "Password" [(ngModel)]="loginData.password" name = "password">
+                    <small *ngIf="errorPasswordMessage!=null" class="text-danger">{{errorPasswordMessage}}</small>
+                </div>
+                <button class="btn btn-secondary" (click) = "login()" >LOGIN</button> 
+            </form>
+            <button class="btn btn-link" (click)="registerPage()">New User? Click Here</button>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>

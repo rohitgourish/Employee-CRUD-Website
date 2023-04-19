@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class ="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h2>REGISTRATION PAGE</h2>
+            <form>
+                <div>
+                    <label>ENTER USERNAME</label>
+                    <input type="text" class="form-control" placeholder= "Username" [(ngModel)]="registerData.username" name="username">
+                </div>
+                <div>
+                    <label>ENTER PASSWORD</label>
+                    <input type="password" class="form-control" placeholder= "Password" [(ngModel)]="registerData.password" name = "password">
+                </div>
+                <button class="btn btn-secondary" (click) = "register()" >REGISTER</button>
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
